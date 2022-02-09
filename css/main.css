@@ -89,7 +89,20 @@ textarea {
 
 
 
+
+/** Content wrappers **/
+
+.content-wrapper {
+  width: 90%;
+  margin: 50px 0;
+}
+
+
 /** -------Base styles for all index.html pages -------- **/
+
+body {
+  max-width: 360px;
+}
 
 header,
 footer {
@@ -99,11 +112,24 @@ footer {
   flex-flow: row wrap;
 }
 
+/** Header styles **/
+
+header {
+  padding: 15px 0;
+}
+
+.header-divider {
+  height: 2px;
+  width: 100%;
+  margin: 10px 0;
+}
+
 header .content-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 0;
 }
 
 header nav {
@@ -111,11 +137,35 @@ header nav {
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
+  width: 60%;
+  /** This width was reached by dividing the logo in header (220px) by full width of header (360px). Rounding is fine. **/
 }
 
 header nav ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+}
+
+/** Footer styles **/
+
+footer {
+  flex-direction: column;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .content-wrapper {
+  width: 55%;
+  /** This width allows for there to be a little space around edges. **/
+  margin: 50px 0;
+}
+
+footer .contact {
+  margin-bottom: 40px;
 }
 
 footer .social-icons {
@@ -132,13 +182,15 @@ footer .social-icons p {
 
 footer .copyright {
   display: flex;
-  justify-content: center;
   flex-flow: row wrap;
+  width: 55%;
+  margin: 20px 0;
 }
 
-/** ------Mobile styles------ **/
 
-/* Hero area */
+/** ------Mobile styles - approx 360px wide ------ **/
+
+/* Hero area - 180px x 500px image */
 
 .hero-area {
   display: flex;
@@ -163,11 +215,27 @@ aside {
   flex-flow: row wrap;
 }
 
-.features-items {
+.features h2 {
+  margin-bottom: 60px;
+}
+
+.features article {
+  display: flex;
+  width: 63%;
+  /** Adjusted width to match key - est based on paragraph appearance. **/
+  margin: 30px;
+}
+
+.features .features-items {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  text-align: center;
+}
+
+.features p {
+  margin: 0;
 }
 
 /* Reviews */
@@ -178,8 +246,17 @@ aside {
   flex-flow: row wrap;
 }
 
+.reviews h2 {
+  margin-bottom: 40px;
+}
+
+.reviews h3 {
+  width: 55%;
+  margin: 20px 0;
+}
+
 /* ========================
-   About index.html styles
+   About page styles
    ======================== */
 
 .mission {
@@ -189,15 +266,21 @@ aside {
   flex-flow: row wrap;
 }
 
-.contact-section {
+.contact-content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  text-align: center;
 }
 
+.contact p {
+  margin: 0;
+}
+
+
 /* ========================
-   FAQ index.html styles
+   FAQ page styles
    ======================== */
 
 .faq {
@@ -212,9 +295,16 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 50px 0 0 0;
 }
 
+.faq h2 {
+  margin-bottom: 40px;
+}
 
+.faq-content {
+  margin-bottom: 50px;
+}
 
 
 /* ==========================================================================
