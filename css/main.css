@@ -100,9 +100,6 @@ textarea {
 
 /** -------Base styles for all index.html pages -------- **/
 
-body {
-  max-width: 360px;
-}
 
 header,
 footer {
@@ -118,18 +115,18 @@ header {
   padding: 15px 0;
 }
 
-.header-divider {
-  height: 2px;
-  width: 100%;
-  margin: 10px 0;
-}
-
 header .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
   margin: 0;
+}
+
+.header-divider {
+  height: 1px;
+  width: 100%;
+  margin: 10px 0 20px 0;
 }
 
 header nav {
@@ -161,7 +158,8 @@ footer p {
 footer .content-wrapper {
   width: 55%;
   /** This width allows for there to be a little space around edges. **/
-  margin: 50px 0;
+  text-align: center;
+  margin-right: 50px;
 }
 
 footer .contact {
@@ -178,12 +176,10 @@ footer .social-icons p {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 footer .copyright {
-  display: flex;
-  flex-flow: row wrap;
-  width: 55%;
   margin: 20px 0;
 }
 
@@ -220,10 +216,9 @@ aside {
 }
 
 .features article {
-  display: flex;
   width: 63%;
   /** Adjusted width to match key - est based on paragraph appearance. **/
-  margin: 30px;
+  margin: 30px 0;
 }
 
 .features .features-items {
@@ -395,15 +390,55 @@ aside {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/** Note: Removed first media query of boilerplate and added...**/
+
+@media only screen and (min-width: 768px) {
+  /* tablet styles here */
+  
+  .content-wrapper {
+    max-width: 640px;
+    margin: 100px 0;
+  }
+
+  header {
+    width: 100%;
+    justify-content:flex-start;
+		flex-flow: row;
+  }
+
+  header .content-wrapper {
+    width: 100%;
+  }
+
+  header nav {
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  header nav ul {
+		justify-content: right;
+		flex-flow: row;
+		align-items: flex-end;
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  /* Hero-area */
+
+  /* Aside */
+
+  aside .content-wrapper {
+    margin: 50px 0;
+  }
+  
+    
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+@media only screen and (min-width: 1200px) {
+  /* desktop styles here */
+  
 }
 
 /* ==========================================================================
