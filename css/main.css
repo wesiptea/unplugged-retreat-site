@@ -183,7 +183,6 @@ footer .copyright {
   margin: 20px 0;
 }
 
-
 /** ------Mobile styles - approx 360px wide ------ **/
 
 /* Hero area - 180px x 500px image */
@@ -225,7 +224,6 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
   text-align: center;
 }
 
@@ -390,35 +388,33 @@ aside {
    Modify as content requires.
    ========================================================================== */
 
-/** Note: Removed first media query of boilerplate and added...**/
+/** Note: Removed first media query of boilerplate and added 2 breakpoints below...**/
 
 @media only screen and (min-width: 768px) {
-  /* tablet styles here */
+  /* Tablet styles here */
   
+  /* General styles */
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
   }
 
+  /* Header */
   header {
-    width: 100%;
-    justify-content:flex-start;
-		flex-flow: row;
+    justify-content: space-around;
   }
 
   header .content-wrapper {
     width: 100%;
+    justify-content: space-between;
   }
 
   header nav {
-    justify-content: space-between;
-    width: 50%;
+    width: 25%;
   }
 
   header nav ul {
-		justify-content: right;
-		flex-flow: row;
-		align-items: flex-end;
+		justify-content: space-between;	
   }
 
   .header-divider {
@@ -428,13 +424,110 @@ aside {
   /* Hero-area */
 
   /* Aside */
-
   aside .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
     margin: 50px 0;
   }
   
-    
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 43%;
+    margin: 0;
+    padding: 45px 0;
+  }
+
+  /* Features */
+  .features article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    text-align: center;
+    flex-basis: 2.5em;
+  }
+
+  .features .features-item-description {
+    width: 50%;
+  } 
+
+  /* Reviews */
+  .reviews article {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .reviews article div {
+      width: 50%;         
+  }
+
+  /* Footer */
+  footer .content-wrapper {
+      width: 65%;
+      margin: 100px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .contact {
+      margin-bottom: 0;
+  }
+
+  footer .copyright {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+  }
 }
+
+/* ============About Page for Tablet =============== */
+
+  .mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    padding-top: 20px;
+  }
+
+  .mission-content p {
+    width: 45%;
+  }
+
+  .contact-section .content-wrapper h2 {
+    width: 80%;
+  }
+
+  .contact-content .contact {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-flow: wrap;
+    text-align: left;
+    width: 460px;
+  }
+
+
+/* ============= FAQ Page for Tablet =============== */
+
+  .faq .content-wrapper {
+    justify-content: space-between;
+  }
+
+  .faq-content {
+    flex-basis: 40%;
+  }
+
+  .faq h2 {
+    width: 100%;
+  }
+
 
 @media only screen and (min-width: 1200px) {
   /* desktop styles here */
