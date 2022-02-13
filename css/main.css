@@ -395,16 +395,16 @@ aside {
 /** Note: Removed first media query of boilerplate and added 2 breakpoints below...**/
 
 @media only screen and (min-width: 768px) {
-  /* Tablet styles here */
+  /* TABLET styles begin here */
   
-  /* ============== General styles ============== */
+  /* TABLET - General */
 
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
   }
 
-  /* Header */
+  /* TABLET - Header */
   header {
     justify-content: space-around;
   }
@@ -426,9 +426,9 @@ aside {
     display: none;
   }
 
-  /* Hero-area */
+  /* TABLET - Hero-area */
 
-  /* Aside */
+  /* TABLET - Aside */
   aside .content-wrapper {
     display: flex;
     justify-content: space-between;
@@ -443,21 +443,21 @@ aside {
     padding: 45px 0;
   }
 
-  /* Features */
+  /* TABLET - Features */
   .features article {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
     text-align: center;
-    flex-basis: 2.5em;
+    flex-basis: 50%;
   }
 
   .features .features-item-description {
     width: 50%;
   } 
 
-  /* Reviews */
+  /* TABLET - Reviews */
   .reviews article {
     display: flex;
     justify-content: space-between;
@@ -467,7 +467,7 @@ aside {
       width: 50%;         
   }
 
-  /* Footer */
+  /* TABLET - Footer */
   footer .content-wrapper {
       width: 65%;
       margin: 100px 0;
@@ -489,7 +489,7 @@ aside {
   }
 }
 
-/* ============= About Page for Tablet =============== */
+/* ============= TABLET - About Page =============== */
 
   .mission-content {
     display: flex;
@@ -524,7 +524,7 @@ aside {
   }
 
 
-/* ============= FAQ Page for Tablet =============== */
+/* ============= TABLET - FAQ Page =============== */
 
   .faq .content-wrapper {
     justify-content: space-between;
@@ -540,8 +540,83 @@ aside {
 
 
 @media only screen and (min-width: 1200px) {
-  /* desktop styles here */
+  /* DESKTOP begin styles here */
   
+  /* DESKTOP - General */
+
+  .content-wrapper {
+    max-width: 960px;
+  }  
+
+  /* DESKTOP - Header */
+
+  header nav {
+    width: 25%;
+  }
+
+  header nav ul {
+		justify-content: space-between;	
+  }
+
+  /* DESKTOP - Hero */
+
+  .hero-area h1 {
+    width: 75%;
+  }
+
+  /* DESKTOP - Aside */
+
+  aside .content-wrapper {
+    justify-content: space-around;
+  }
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+      width: 40%;
+  }
+
+  aside .content-wrapper .form {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  /* DESKTOP - Features */
+
+  .features h2 {
+    width: 91%;
+  }
+
+  .features-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-flow: column wrap;
+  }
+
+  .features article {
+    display: flex;
+    flex-basis: 35%;
+  }
+
+  /* DESKTOP - Reviews */
+
+  .reviews article div {
+    width: 50%;
+}
+
+/* ============= DESKTOP - About Page =============== */
+
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+    width: 91%;
+  }
+
+/* ============= DESKTOP - FAQ Page =============== */
+
+  .faq h2 {
+    width: 100%;
+  }
 }
 
 /* ==========================================================================
