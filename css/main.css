@@ -259,12 +259,16 @@ aside {
   flex-flow: row wrap;
 }
 
-.contact-content {
+.contact-section {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+}
+
+.contact-content {
+  display: flex;
   flex-flow: row wrap;
-  text-align: center;
+  text-align: left;
 }
 
 .contact p {
@@ -393,7 +397,8 @@ aside {
 @media only screen and (min-width: 768px) {
   /* Tablet styles here */
   
-  /* General styles */
+  /* ============== General styles ============== */
+
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
@@ -479,14 +484,12 @@ aside {
   }
 
   footer .copyright {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 100%;
+      text-align: center;
   }
 }
 
-/* ============About Page for Tablet =============== */
+/* ============= About Page for Tablet =============== */
 
   .mission-content {
     display: flex;
@@ -500,17 +503,24 @@ aside {
     width: 45%;
   }
 
+  .contact-section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
   .contact-section .content-wrapper h2 {
-    width: 80%;
+    width: 100%;
   }
 
   .contact-content .contact {
     display: flex;
     justify-content: space-between;
-    align-content: center;
     flex-flow: wrap;
-    text-align: left;
-    width: 460px;
+  }
+
+  .contact-content p {
+    padding-right: 90px;
   }
 
 
