@@ -220,11 +220,11 @@ aside {
   margin: 30px 0;
 }
 
-.features .features-items {
+.features .feature-items {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  flex-flow: row wrap;
 }
 
 .features p {
@@ -448,8 +448,7 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column wrap;
-    text-align: center;
+    flex-flow: row wrap;
     flex-basis: 50%;
   }
 
@@ -561,7 +560,7 @@ aside {
   /* DESKTOP - Hero */
 
   .hero-area h1 {
-    width: 75%;
+    width: 65%;
   }
 
   /* DESKTOP - Aside */
@@ -572,13 +571,7 @@ aside {
 
   aside .content-wrapper .form-description,
   aside .content-wrapper .form {
-      width: 40%;
-  }
-
-  aside .content-wrapper .form {
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start;
+      width: 30%;
   }
 
   /* DESKTOP - Features */
@@ -587,29 +580,29 @@ aside {
     width: 91%;
   }
 
-  .features-items {
+  .features .feature-items {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
   }
 
   .features article {
-    display: flex;
     flex-basis: 35%;
   }
 
   /* DESKTOP - Reviews */
 
   .reviews article div {
-    width: 50%;
+    width: 45%;
 }
 
 /* ============= DESKTOP - About Page =============== */
 
   .mission h2,
   .contact-section .content-wrapper h2 {
-    width: 91%;
+    width: 95%;
   }
 
 /* ============= DESKTOP - FAQ Page =============== */
