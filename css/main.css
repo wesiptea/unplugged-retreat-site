@@ -88,18 +88,66 @@ textarea {
    ======================== */
 
 
+   /** -------Base styles for all index.html pages -------- **/
 
+html {
+  font-size: 16px;
+}
 
-/** Content wrappers **/
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  text-align: left;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  color: #e2e3ed;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.25em;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.875em;
+}
+
+h3,
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125em;
+}
+
+p {
+  line-height: 1.125em;
+  font-size: 0.875em;
+}
+
+img {
+
+}
+
+figure {
+
+}
+
+address {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+}
 
 .content-wrapper {
   width: 90%;
   margin: 50px 0;
 }
-
-
-/** -------Base styles for all index.html pages -------- **/
-
 
 header,
 footer {
@@ -141,7 +189,6 @@ header nav {
 header nav ul {
   display: flex;
   justify-content: space-around;
-  list-style-type: none;
   width: 100%;
 }
 
@@ -230,6 +277,7 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  text-align: center;
 }
 
 .features p {
