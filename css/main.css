@@ -88,7 +88,7 @@ textarea {
    ======================== */
 
 
-   /** -------Base styles for all index.html pages -------- **/
+   /** Base styles for all index.html pages **/
 
 html {
   font-size: 16px;
@@ -98,11 +98,15 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   text-align: left;
+  color: #e2e3ed;
+  background-color: #202322;
 }
 
 ul,
 ol {
   list-style-type: none;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 a {
@@ -112,22 +116,28 @@ a {
 
 h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.25em;
+  font-weight: 500; 
+  line-height: 1.2em;
 }
 
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
+  font-weight: 500; 
+  margin-top: 0;
 }
 
 h3,
 h4 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.125em;
+  font-size: 1.5em;
+  font-weight: 500; 
+  margin: 20px 0;
+  color: #e2e3ed;
 }
 
 p {
-  line-height: 1.125em;
+  line-height: 1.5em;
   font-size: 0.875em;
 }
 
@@ -148,6 +158,8 @@ address {
   width: 90%;
   margin: 50px 0;
 }
+
+/** Base Header-Footer styles **/
 
 header,
 footer {
@@ -174,15 +186,18 @@ header .content-wrapper {
 .header-divider {
   height: 1px;
   width: 100%;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 10px 0;
+  border-bottom: 1px solid #333333;
 }
 
 header nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
+  font-weight: 700;
   width: 60%;
+  
   /** This width was reached by dividing the logo in header (220px) by full width of header (360px). Rounding is fine. **/
 }
 
@@ -190,11 +205,17 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  padding-left: 0;
+}
+
+header nav ul li {
+  font-size: 1.125em;
 }
 
 /** Footer styles **/
 
 footer {
+  text-align: center;
   flex-direction: column;
 }
 
@@ -205,8 +226,7 @@ footer p {
 footer .content-wrapper {
   width: 55%;
   /** This width allows for there to be a little space around edges. **/
-  text-align: center;
-  margin-right: 50px;
+  margin: 40px 0;
 }
 
 footer .contact {
@@ -214,7 +234,7 @@ footer .contact {
   justify-items: center;
   align-items: center;
   flex-flow: column;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 footer .social-icons {
@@ -237,7 +257,7 @@ footer .copyright {
 
 /** ------Mobile styles - approx 360px wide ------ **/
 
-/* Hero area - 180px x 500px image */
+/* Hero area - will add a 180px x 500px image */
 
 .hero-area {
   display: flex;
@@ -252,6 +272,37 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
+}
+
+aside .form {
+  margin-top: 30px;
+}
+ 
+/* Aside input-text-form code */
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+/* Aside button-form code */
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Features */
@@ -262,7 +313,7 @@ aside {
   flex-flow: row wrap;
 }
 
-.features h2 {
+.features h1 {
   margin-bottom: 60px;
 }
 
@@ -290,6 +341,7 @@ aside {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background-color: #2a423a;
 }
 
 .reviews h2 {
@@ -301,21 +353,23 @@ aside {
   margin: 20px 0;
 }
 
-/* ========================
-   About page styles
-   ======================== */
+
+/* ========= MOBILE - About page styles ========= */
 
 .mission {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
+  margin: 50px 0 50px 0;
 }
 
 .contact-section {
   display: flex;
   justify-content: center;
   align-content: center;
+  background-color: #2a423a;
 }
 
 .contact-content {
@@ -329,23 +383,22 @@ aside {
 }
 
 
-/* ========================
-   FAQ page styles
-   ======================== */
+/* ========= MOBILE - FAQ page styles ========= */
 
 .faq {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
+  background-color: #527158;
+  margin: 50px 0 50px 0;
 }
 
 .faq .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
-  margin: 50px 0 0 0;
+  flex-flow: column;
+  margin: 50px 0;
 }
 
 .faq h2 {
@@ -486,7 +539,7 @@ aside {
     display: flex;
     justify-content: space-between;
     flex-flow: wrap;
-    margin: 50px 0;
+    margin: 25px 0;
   }
   
   aside .content-wrapper .form-description,
@@ -580,9 +633,11 @@ aside {
 
 /* ============= TABLET - FAQ Page =============== */
 
-  .faq .content-wrapper {
-    justify-content: space-between;
-  }
+.faq .content-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
 
   .faq-content {
     flex-basis: 40%;
@@ -635,8 +690,8 @@ aside {
     width: 100%;
   }
 
-  .features h2 {
-    width: 90%;
+  .features h1 {
+    width: 75%;
   }
 
   .features article {
@@ -676,6 +731,9 @@ aside {
   .faq h2 {
     width: 100%;
   }
+
+
+
 }
 
 /* ==========================================================================
