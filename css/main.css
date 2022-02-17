@@ -114,12 +114,6 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500; 
-  line-height: 1.2em;
-}
-
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
@@ -142,11 +136,18 @@ p {
 }
 
 img {
-
+  width: 100%;
 }
 
-figure {
+/* For this project, we want images to span 100% of the width of the screen size 
+* Insert images through css code under approp selectors 
+* Images should be saved as 72ppi - so they are small and quick to load but do not degrade
+* Instead of loading an image through an HTML <img> tag, insert images as background elements - ex - background: url('img/image.jpeg); or background-image url(etc..); to allow photos to load more efficiently 
+* Keep background-size property separate from grouped background properties - ex - 'background: url('img/image.jpg') center no-repeat #333;
+background-size: cover;' ...otherwise, the img may disappear from view  (the #333 gives a color to show if img doesn't load */
 
+figure {
+  margin: 0;
 }
 
 address {
@@ -172,7 +173,7 @@ footer {
 /** Header styles **/
 
 header {
-  padding: 15px 0;
+  padding: 30px 0 15px 0;
 }
 
 header .content-wrapper {
@@ -181,6 +182,15 @@ header .content-wrapper {
   align-items: center;
   flex-flow: row wrap;
   margin: 0;
+}
+
+header figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 60%;
+  /** This width was reached by dividing the logo in header (220px) by full width of header (360px). Rounding is fine. **/
 }
 
 .header-divider {
@@ -195,17 +205,16 @@ header nav {
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
-  font-weight: 700;
   width: 60%;
-  
   /** This width was reached by dividing the logo in header (220px) by full width of header (360px). Rounding is fine. **/
 }
 
 header nav ul {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  font-weight: lighter;
   padding-left: 0;
+  width: 100%;
 }
 
 header nav ul li {
@@ -257,12 +266,28 @@ footer .copyright {
 
 /** ------Mobile styles - approx 360px wide ------ **/
 
-/* Hero area - will add a 180px x 500px image */
+/* Hero area - will add a 180px (w) x 500px (h) image */
 
 .hero-area {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background-image: url('../img/unsplash-retreat.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
+}
+/* Image: inserted as background image - coded as separate elements in this case. These elements could be combined, with the exc of 'background-size: cover' - into 'background: url('img/image.jpg') center no-repeat;' */
+
+.hero-area .content-wrapper {
+  margin: 50px 0;
+}
+.hero-area h1 {
+    font-size: 2.25em;
+    font-weight: bold;
+    margin: 0;
+    width: 87%;
 }
 
 /* Aside */
@@ -277,6 +302,10 @@ aside {
 
 aside .form {
   margin-top: 30px;
+}
+
+aside h3 {
+  margin-top: 0;
 }
  
 /* Aside input-text-form code */
@@ -311,6 +340,11 @@ input[type=button] {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background-image: url('../img/unsplash-retreat-feature-items.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-height: 1450px;
 }
 
 .features h1 {
@@ -345,14 +379,13 @@ input[type=button] {
 }
 
 .reviews h2 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .reviews h3 {
   width: 55%;
   margin: 20px 0;
 }
-
 
 /* ========= MOBILE - About page styles ========= */
 
@@ -511,6 +544,7 @@ input[type=button] {
   }
 
   /* TABLET - Header */
+
   header {
     justify-content: space-around;
   }
@@ -520,6 +554,15 @@ input[type=button] {
     justify-content: space-between;
   }
 
+  header figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 30%;
+    /** This width was reached by dividing the logo in header (220px) by full width of header (690px). Rounding is fine. **/
+  }
+  
   header nav {
     width: 25%;
   }
@@ -565,13 +608,46 @@ input[type=button] {
   }
 
   /* TABLET - Reviews */
+  
+  .reviews .content-wrapper {
+    margin: 50px 0;
+  }
+
+  .reviews h2 {
+    font-size: 2.25em;
+    width: 85%;
+  }
+
+  .reviews h3 {
+    font-size: 1.5em;
+    text-align: start;
+    margin-top: 0;
+    width: 75%;
+  }
+
   .reviews article {
     display: flex;
     justify-content: space-between;
+    flex-flow: row wrap;
   }
-  
+
+  .reviews article div,
+  .reviews article figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 48%;
+  }
+
   .reviews article div {
-      width: 50%;         
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column;
+  }
+
+  .reviews article div p {
+    margin-top: 0;
   }
 
   /* TABLET - Footer */
@@ -659,6 +735,14 @@ input[type=button] {
 
   /* DESKTOP - Header */
 
+  header figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 25%;
+  }
+
   header nav {
     width: 25%;
   }
@@ -731,8 +815,6 @@ input[type=button] {
   .faq h2 {
     width: 100%;
   }
-
-
 
 }
 
