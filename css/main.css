@@ -396,7 +396,14 @@ input[type=button] {
   align-items: center;
   flex-flow: row wrap;
   background-color: #527158;
-  margin: 0;
+}
+
+.mission p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 90%;
 }
 
 .map-container {
@@ -716,14 +723,14 @@ input[type=button] {
     padding-top: 20px;
   }
 
-  .mission-content p {
-    width: 45%;
-  }
-
   .contact-section {
     display: flex;
     justify-content: center;
     align-content: center;
+  }
+
+  .mission p {
+    width: 45%;
   }
 
   .contact-section .content-wrapper h2 {
