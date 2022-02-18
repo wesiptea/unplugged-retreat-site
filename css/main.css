@@ -173,7 +173,7 @@ footer {
 /** Header styles **/
 
 header {
-  padding: 30px 0 15px 0;
+  padding: 15px 0;
 }
 
 header .content-wrapper {
@@ -276,18 +276,19 @@ footer .copyright {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 500px;
+  min-height: 600px;
 }
-/* Image: inserted as background image - coded as separate elements in this case. These elements could be combined, with the exc of 'background-size: cover' - into 'background: url('img/image.jpg') center no-repeat;' */
+/* Image: inserted as background image - coded as separate elements in this case. These elements can be combined - with the exception of 'background-size: cover' - into 'background: url('img/image.jpg') center no-repeat;' */
 
 .hero-area .content-wrapper {
   margin: 50px 0;
 }
+
 .hero-area h1 {
     font-size: 2.25em;
-    font-weight: bold;
+    font-weight: 700;
     margin: 0;
-    width: 87%;
+    width: 65%;
 }
 
 /* Aside */
@@ -395,8 +396,31 @@ input[type=button] {
   align-items: center;
   flex-flow: row wrap;
   background-color: #527158;
-  margin: 50px 0 50px 0;
+  margin: 0;
 }
+
+.map-container {
+  position: relative;
+  padding-bottom: 45%;
+  height: 0;
+  overflow: hidden;
+}
+/* Re: above:
+* padding-bottom is found by dividing the google map's set height by its width (450 div by 600 in this case) = .75 and this sizes the iframe responsively
+* no height is needed since th padding is determining sizing
+* overflow: hidden; means that the map will not overflow its parent div */
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Re: above:
+* 'top: 0;' = aligns iframe with top of div/container.
+* 'left: 0;' = aligns iframe with the left side of the div/container
+* width and height are set to 100% to fill the container */
 
 .contact-section {
   display: flex;
@@ -564,7 +588,7 @@ input[type=button] {
   }
   
   header nav {
-    width: 25%;
+    width: 20%;
   }
 
   header nav ul {
@@ -576,6 +600,10 @@ input[type=button] {
   }
 
   /* TABLET - Hero-area */
+
+  .hero-area h1 {
+    font-size: ;
+  }
 
   /* TABLET - Aside */
   aside .content-wrapper {
@@ -610,11 +638,12 @@ input[type=button] {
   /* TABLET - Reviews */
   
   .reviews .content-wrapper {
-    margin: 50px 0;
+    margin: 50px 0 50px 0;
   }
 
   .reviews h2 {
     font-size: 2.25em;
+    margin-bottom: 40px;
     width: 85%;
   }
 
@@ -629,6 +658,7 @@ input[type=button] {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
+    top: 0;
   }
 
   .reviews article div,
@@ -674,7 +704,11 @@ input[type=button] {
 
 /* ============= TABLET - About Page =============== */
 
-  .mission-content {
+.mission .content-wrapper {
+  margin: 50px 0;
+} 
+
+.mission-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -744,7 +778,7 @@ input[type=button] {
   }
 
   header nav {
-    width: 25%;
+    width: 20%;
   }
 
   header nav ul {
@@ -754,7 +788,7 @@ input[type=button] {
   /* DESKTOP - Hero */
 
   .hero-area h1 {
-    width: 65%;
+    font-size: 3em;
   }
 
   /* DESKTOP - Aside */
